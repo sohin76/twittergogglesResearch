@@ -1,0 +1,34 @@
+Requirements for Alpha Function
+
+The function shall take input from user in the form of a string.
+The function shall run checks on given input to determine if input contains any characters that are non-alphabetic, or a space.
+The function shall return feedback to user in plain text on the web page with a statement clarifying if the input contains only alphabetic characters, or if the input contained non-alphabetic characters.
+The function shall return a false statement for an input with zero length.
+The function shall recognize the following characters as “Alphabetic”: a-z (lowercase), A-Z (uppercase), “_” (space).
+
+Requirements for Numeric Function
+
+The function shall request and verify input from the user 
+The function shall return a false statement for an input with zero length.
+The function shall recognize the following characters as “Numeric”: 0-9, +, -, “.”, “,”
+The function will only accept sign characters (“+” and “-”) in the first position of the string.
+The function shall return feedback to user in plain text on the web page with a statement clarifying if the input contains only numeric characters, or if the input contained non-numeric characters.
+The function shall return a false statement if there is a “+” or “-” anywhere in the input other than the first character.
+
+TEST CASES
+
+Pass for Alphabetic:
+abc
+ABC
+hello world
+Hello World
+
+Pass for Numeric:
+1234
+123.4
++1234
+-1234
++123.4
+1,234
++1,234
+1,234.56

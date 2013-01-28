@@ -1,0 +1,60 @@
+**************************************
+Data Collection -
+Input - The input should be obtained by the twitter search API.  There is example code in the Github repository which you may use and refine. 
+
+To decide what tweets to collect, you will read from the "job" table, which contains a Twitter search string and the frequency of collection (how many minutes between executions of that query).  Again, there is example code that you may reuse.  Since you will be addressing thousand's of tweets at once you will need to consider how to store or contain them.  
+
+Connection Point - You should also consider discussing this with the Persistence team.  What kind of data will they want?  You do not need to implement the connection in this lab; but its worth thinking a little bit ahead.
+
+Output - Your goal is to create a PhP module that *only* gathers the data and formats it according to some specific structure.  Candidate structures are .csv, json and XML.  JSON is the way it is delivered from the API. 
+
+**************************************
+Persistence -
+Your main goal is to implement the database schema, and provide getter and setter methods in PhP to support the job table; and getter methods to support the tweet, hashtag, mention and URL tables.  
+
+Input - A database schema.  It is advisable to start with the schema provided in the Github repository and refine as needed.  For example, the "_archive" and "_stage" tables are not required.
+
+Connection Point - Tables to support researcher collaboration do not yet exist in the schema, so you should work with "Researcher Collaboration" to define and implement these tables in this round.
+
+Output - A populated database schema
+
+**************************************
+Administration -
+In this sprint, you goal is to enable the creation and updating of "jobs" in the job table.  You must explicitly prevent deletes from the job table, not allow access to other tables and log any changes to the "query" field in the job table to another, new table.  
+
+Input - A PhP page for editing the job table
+
+Connection Point - Work with Persistence on defining a "job change log table".
+
+Output - A listing of jobs.  You do NOT need to provide job search capabilities in this sprint.
+
+**************************************
+Reporting -
+In this sprint, your goal is to provide summary statistics for the Tweets in the sample database.
+
+Input - The sample database "Tweet" table
+
+Output - Show the total number of tweets per day for the a specific job in the sample database.  Show the total number of tweets for all specific jobs in the sample database
+
+
+**************************************
+Researcher Collaboration -
+In this sprint, your goal is to create a PhP page that enables researchers to submit candidate queries to run in the Twitter search API, and also to enable those requests to be updated.
+
+Connection Point - Persistence team for tables you will need to add to the schema; in future sprints you will need to work with Administration, so you may want to start that discussion now.
+
+Input - Researcher requests for search phrases.  
+
+Output - A listing of the search phrases (query) requested, and identification of whether or not those phrases already exist in the sample database.
+
+**************************************
+Data Visualization -
+In this sprint, you goal is a sample PhP page with a visual representation of what is going on in the "twitter verse" that is captured in the sample database.
+
+Input - Data from the Tweet, Hashtag, Mention and URL tables in the sample database.
+
+Connection Point - Team Persistence
+
+Output - Two different visualizations.  I encourage you to explore the D3 javascript library in addition to any functions for visualization contained within PhP itself.
+
+**************************************
